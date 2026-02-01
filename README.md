@@ -1,12 +1,9 @@
 # ESP32-HomeKit-Thermostat
 
-An ESP32-based thermostat and hot water controller with native Apple HomeKit support, built using the [HomeSpan](https://github.com/HomeSpan/HomeSpan) framework.  
-The device controls a heating relay based on ambient temperature with hysteresis and exposes a separate switch for hot water control.
+An ESP32-based thermostat and hot water controller with native Apple HomeKit support, built using the [HomeSpan](https://github.com/HomeSpan/HomeSpan) framework.
 
-Temperature is measured using a DS18B20 sensor, while heating and hot water are switched via a 2-channel ESP32 relay board powered from mains voltage.  
-All settings are persisted across reboots using NVS preferences.
+Temperature is measured using a DS18B20 sensor, while heating and hot water are switched via a 2-channel ESP32 relay board powered from mains voltage. The heating relay is controlled based on ambient temperature with hysteresis.
 
-The accessory can be paired directly with Apple Home or Home Assistant (via HomeKit Controller).
 
 ## Hardware
 
@@ -75,4 +72,4 @@ The device advertises itself as a HomeKit Thermostat accessory.
 
 - The device stores the target temperature, thermostat mode, and hot water state in NVS and restores them after reboot.
 - Heating control uses a simple hysteresis-based on/off strategy to prevent relay chatter.
-- This project is intended for **experienced users** working with **mains voltage** — proper isolation, enclosures, and electrical safety practices are mandatory.
+- This project is intended for **experienced users** working with **mains voltage**. Proper isolation, enclosures, and electrical safety practices are mandatory.
